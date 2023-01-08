@@ -203,10 +203,28 @@
  * Testimonials slider
  */
 new Swiper('.testimonials-slider', {
-  speed: 600,
+  speed: 700,
   loop: true,
   autoplay: {
     delay: 5000,
+    disableOnInteraction: false
+  },
+  slidesPerView: 'auto',
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  }
+});
+
+/**
+ * Opinions
+ */
+new Swiper('.testimonials2-slider', {
+  speed: 1000,
+  loop: true,
+  autoplay: {
+    delay: 8000,
     disableOnInteraction: false
   },
   slidesPerView: 'auto',
