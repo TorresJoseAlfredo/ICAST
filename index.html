@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,6 +52,7 @@
           <li><a class="nav-link scrollto" href="#services">Program</a></li>
           <!---<li><a class="nav-link scrollto" href="#services">Workshops</a></li>-->
           <li><a class="nav-link scrollto" href="#Committee">Committee</a>
+          <!---<li><a class="nav-link scrollto" href="#Attestations">Attestations</a>
           
               
           <li class="dropdown"><a href="#"><span>+Info</span> <i class="bi bi-chevron-down"></i></a>
@@ -1911,21 +1913,7 @@
             </div>
           </div>
 
-          <div class="col-lg-3 mt-4 mt-lg-0">
-            <div class="box">
-              <h4>MSc. Erika Virginia de Lucio Rodríguez</h4>
-              <p>Escuela Superior de Ingeniería Mecánica y Eléctrica Zacatenco, Instituto Politécnico Nacional. Mexico.</p>
-              <div>
-                &nbsp;
-              </div>
-              <div class="col-6 col-md-4">
-                <a href="https://www.linkedin.com/in/erika-virginia-de-lucio-rodr%C3%ADguez-609ab332/" title="Linkedin"
-                  target="_blank"><i class="bi bi-linkedin icon-logos"></i></a>&nbsp;
-                <a href="https://orcid.org/0000-0002-4714-850X" title="ORCID" target="_blank"><i
-                    class="bx bx-link icon-logos"></i></a>
-              </div>
-            </div>
-          </div>
+        
 
           
           <!-------
@@ -1985,7 +1973,45 @@
         </div>
         </section><!-- End Committee Section -->
         
-       
+       <!-- ======= Program Section ======= -->
+
+    
+    <section id="Attestations" class="attestations">
+      <div class="container">
+  
+        <div class="section-title">
+          <h2>Attestations</h2>
+          <p><b>Constancias</b></p>
+        </div>
+        <div class="row">
+          
+            <?php   while($constancia = mysqli_fetch_assoc($consulta)){  ?>   
+          <div class="col-lg-6 mt-2 mt-lg-0">
+            <div class="box">
+              <h4>CERTIFICATE ID <?php  echo $constancia['Certificate_ID'] ?> valid!</h4>   
+                  <p>The Centro de Desarrollo Aeroespacial del 
+                  Instituto Politécnico Nacional certifies the participation of:</p>
+                  <div>
+                    <br>
+                    &nbsp;
+                  </div>
+              <h4><?php  echo $constancia['Nombre_con_grado'] ?></h4>   
+              <h4><?php  echo $constancia['Adscripcion'] ?></h4>   
+                 <p>imparted the <?php  echo $constancia['Tipo'] ?>
+                  entitled "<?php  echo $constancia['Titulo'] ?>", 
+                  of <?php  echo $constancia['Duracion'] ?>, 
+                  at the International Conference of Aerospace Science and 
+                  Technology (ICASST) 2023, which took place from November 19th 
+                  to November 24nd, 2023, at the facilities of this centre</p>
+                  
+            </div>
+          </div>
+                  
+                  <?php } ?>
+        </div>
+      </div>
+    </section>
+    <!-- End Attestations -->
 
     <!-- ======= Institutions Section ======= -->
     <section id="portfolio" class="portfolio">
